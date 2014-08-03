@@ -1,7 +1,23 @@
 [
-    "index.md",
+    {
+        "filename": "index.md",
+        "attr": {
+            "data-state": "title"
+        }
+    },
     [
-      "who-am-i.md",
-      "object-partners.md"
-    ]
+        {
+            "filename": "who-am-i.md",
+            "attr": {
+                "data-state": "title"
+            }
+        },
+        {
+            "filename": "object-partners.md",
+            "attr": {
+                "data-state": "title"
+            }
+        }
+    ],
+    "start-talking.md"
 ]

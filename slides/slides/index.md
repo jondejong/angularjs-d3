@@ -1,10 +1,7 @@
 
-# Combining AngularJS + D3
+## Combining AngularJS + D3
+&nbsp;  
+Jon DeJong  
+Chief Software Technologist
 
-From the terminal, pop in:
-
-  ```yo reveal:slide "Slide Title"```
-
-Available options:
-
- ```--markdown --attributes --notes```
+[@jondejong](http://twitter.com/jondejong)
