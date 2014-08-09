@@ -1,17 +1,24 @@
 package distance.data
 
+import org.bson.types.ObjectId
+
 class Workout {
 
+    ObjectId id
+
     String type
+    Date date
+
     Integer year
     Integer month
     Integer weekInYear
+    Integer weekInMonth
     Integer dayInMonth
+    Integer dayInWeek
 
-    BigDecimal distance
-
+    Long distance
 
     static mapping = {
-        compoundIndex year:1, month:1, weekInYear, dayInMonth
+        compoundIndex year:1, month:1
     }
 }
