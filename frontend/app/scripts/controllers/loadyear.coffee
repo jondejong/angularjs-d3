@@ -7,6 +7,6 @@ angular.module('frontendApp')
     WorkoutService.getYearTotals().then (data)->
         console.log("Done loading data", data)
         DataHolderService.setCurrentData(data)
-        $state.go("")
+        $state.go("workout.year")
 
 

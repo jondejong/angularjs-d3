@@ -6,7 +6,8 @@ angular.module('frontendApp', [
         'ngSanitize',
         'ngRoute',
         'ui.bootstrap',
-        'ui.router'
+        'ui.router',
+        'nvd3ChartDirectives'
     ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
         $urlRouterProvider.otherwise("/workout/loadyear")
