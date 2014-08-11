@@ -6,7 +6,7 @@ import grails.validation.Validateable
 class ListWorkoutsCommand {
 
     Integer year
-    Integer month
+    String month
     Integer week
 
 

@@ -8,7 +8,7 @@ angular.module('frontendApp', [
         'ui.bootstrap',
         'ui.router',
         'nvd3ChartDirectives'
-    ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
+    ]).config ($stateProvider, $urlRouterProvider) ->
 
         $urlRouterProvider.otherwise("/workout/loadall")
 
@@ -38,4 +38,13 @@ angular.module('frontendApp', [
                 templateUrl: 'views/barchart.html'
                 controller: 'YearChartCtrl'
 
+            .state 'workout.loadmonth',
+                url: '/loadmonth/:year/:month'
+                templateUrl: 'views/loading.html'
+                controller: 'LoadMonthCtrl'
+
+            .state 'workout.month',
+                url: '/month/:year/:month'
+                templateUrl: 'views/barchart.html'
+                controller: 'MonthChartCtrl'
 

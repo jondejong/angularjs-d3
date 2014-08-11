@@ -3,8 +3,32 @@
 angular.module('frontendApp')
   .service 'WorkoutService', ($http) ->
 
-
     {
+        getWeekTotals: (year, month)->
+            $http.get("http://localhost:8080/distance-data/workout/#{year}/#{month}").then (response)->
+                weeks = response.data.month.weeks
+                total =
+                {
+                    key: "Total",
+                    values: weeks.map (week)->
+                        [week.week, week.total]
+                }
+
+                bikeTotal =
+                {
+                    key: "Bike",
+                    values: weeks.map (week)->
+                        [week.week, week.bikeTotal]
+                }
+
+                runTotal =
+                {
+                    key: "Run",
+                    values: weeks.map (week)->
+                        [week.week, week.runTotal]
+                }
+                [total, bikeTotal, runTotal]
+
         getMonthTotals: (year) ->
             $http.get("http://localhost:8080/distance-data/workout/#{year}").then (response)->
                 months = response.data.year.months

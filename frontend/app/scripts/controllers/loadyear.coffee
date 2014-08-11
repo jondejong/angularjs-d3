@@ -5,4 +5,5 @@ angular.module('frontendApp')
 
     WorkoutService.getMonthTotals($stateParams.year).then (data)->
         DataHolderService.setCurrentData(data)
+        DataHolderService.setHeaderData($stateParams.year, undefined)
         $state.go("workout.year", {year: $stateParams.year})

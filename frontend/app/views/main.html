@@ -8,6 +8,13 @@
 </div>
 
 <div>
+    <div class="header" ng-show="header.year">
+        <h2><span class="btn btn-default" ng-show="header.year" ng-click="showAll()">All</span>
+            <span ng-show="header.year && !header.month">{{header.year}}</span>
+            <span ng-show="header.month" class="btn btn-default" ng-click="showYear(header.year)">{{header.year}}</span>
+            <span ng-show="header.month">{{header.month}}</span>
+        </h2>
+    </div>
     <ui-view></ui-view>
 </div>
 
