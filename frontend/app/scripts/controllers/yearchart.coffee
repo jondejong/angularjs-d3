@@ -2,10 +2,7 @@ angular.module('frontendApp')
 .controller 'YearChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
 
     $scope.data = DataHolderService.getCurrentData()
-
-    $scope.tooltip = ()->
-        (key, x, y) ->
-            "<p>#{key}: #{y} miles in #{x}</p>"
+    $scope.year = $stateParams.year
 
     $scope.callback = ()->
         ()->
@@ -15,4 +12,4 @@ angular.module('frontendApp')
             )
 
     if !$scope.data
-        $state.go('workout.loadyear', {year: $stateParams.year})
+        $state.go('workout.loadyear', {year: $scope.year})

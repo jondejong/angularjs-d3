@@ -9,9 +9,6 @@ angular.module('frontendApp')
 
     $scope.data = DataHolderService.getCurrentData()
 
-    $scope.tooltip = ()->
-        (key, x, y) ->
-            "<p>#{key}: #{y} miles in #{x}</p>"
 
     $scope.callback = ()->
         ()->
