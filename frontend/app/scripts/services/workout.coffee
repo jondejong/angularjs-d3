@@ -5,29 +5,54 @@ angular.module('frontendApp')
 
 
     {
+        getMonthTotals: (year) ->
+            $http.get("http://localhost:8080/distance-data/workout/#{year}").then (response)->
+                months = response.data.year.months
+                total =
+                {
+                    key: "Total",
+                    values: months.map (month)->
+                        [month.month, month.total]
+                }
+
+                bikeTotal =
+                {
+                    key: "Bike",
+                    values: months.map (month)->
+                        [month.month, month.bikeTotal]
+                }
+
+                runTotal =
+                {
+                    key: "Run",
+                    values: months.map (month)->
+                        [month.month, month.runTotal]
+                }
+                [total, bikeTotal, runTotal]
+
         getYearTotals: ->
             $http.get("http://localhost:8080/distance-data/workout/").then (response)->
                 years = response.data.years
-                totals =
+                total =
                 {
-                    key: "Totals",
+                    key: "Total",
                     values: years.map (year)->
-                        [year.year - 2010, year.total]
+                        [year.year, year.total]
                 }
 
-                bikeTotals =
+                bikeTotal =
                 {
-                    key: "Totals",
+                    key: "Bike",
                     values: years.map (year)->
-                        [year.year - 2010, year.bikeTotal]
+                        [year.year, year.bikeTotal]
                 }
 
-                runTotals =
+                runTotal =
                 {
-                    key: "Totals",
+                    key: "Run",
                     values: years.map (year)->
-                        [year.year - 2010, year.runTotal]
+                        [year.year, year.runTotal]
                 }
 
-                [totals, bikeTotals, runTotals]
+                [total, bikeTotal, runTotal]
         }

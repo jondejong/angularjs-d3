@@ -1,12 +1,8 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'LoadYearCtrl', ($scope, WorkoutService, DataHolderService, $state) ->
-    console.log("In LoadYearCtrl")
+.controller 'LoadYearCtrl', ($scope, WorkoutService, DataHolderService, $state, $stateParams) ->
 
-    WorkoutService.getYearTotals().then (data)->
-        console.log("Done loading data", data)
+    WorkoutService.getMonthTotals($stateParams.year).then (data)->
         DataHolderService.setCurrentData(data)
-        $state.go("workout.year")
-
-
+        $state.go("workout.year", {year: $stateParams.year})

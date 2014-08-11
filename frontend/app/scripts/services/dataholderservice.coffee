@@ -6,9 +6,7 @@ angular.module('frontendApp')
     currentData = undefined
 
     {
-        getCurrentData: ()->
-            currentData
+        getCurrentData: ()-> currentData
 
-        setCurrentData: (data)->
-            currentData = data
+        setCurrentData: (data)-> currentData = data
     }

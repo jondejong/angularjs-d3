@@ -1,5 +1,11 @@
+'use strict'
+
 angular.module('frontendApp')
-.controller 'YearChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
+  .controller 'AllChartCtrl', ($scope, DataHolderService, $state) ->
+
+    loadYear = (year)->
+        $state.go("workout.loadyear", {year: year})
+
 
     $scope.data = DataHolderService.getCurrentData()
 
@@ -10,9 +16,9 @@ angular.module('frontendApp')
     $scope.callback = ()->
         ()->
             d3.selectAll(".nv-bar").on('click',
-            (d) ->
-                console.log("clicked got passed in:", d)
+                (d) ->
+                    loadYear(d[0])
             )
 
     if !$scope.data
-        $state.go('workout.loadyear', {year: $stateParams.year})
+        $state.go('workout.loadall')

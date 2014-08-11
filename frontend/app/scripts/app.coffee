@@ -10,7 +10,7 @@ angular.module('frontendApp', [
         'nvd3ChartDirectives'
     ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
-        $urlRouterProvider.otherwise("/workout/loadyear")
+        $urlRouterProvider.otherwise("/workout/loadall")
 
         $stateProvider
             .state 'workout',
@@ -18,13 +18,24 @@ angular.module('frontendApp', [
                 templateUrl: 'views/main.html'
                 controller: 'MainCtrl'
 
+            .state 'workout.loadall',
+                url: '/loadall'
+                templateUrl: 'views/loading.html'
+                controller: 'LoadAllCtrl'
+
+            .state 'workout.all',
+                url: '/all'
+                templateUrl: 'views/barchart.html'
+                controller: 'AllChartCtrl'
+
             .state 'workout.loadyear',
-                url: '/loadyear'
+                url: '/loadyear/:year'
                 templateUrl: 'views/loading.html'
                 controller: 'LoadYearCtrl'
+
             .state 'workout.year',
-                url: '/year'
-                templateUrl: 'views/year.html'
+                url: '/year/:year'
+                templateUrl: 'views/barchart.html'
                 controller: 'YearChartCtrl'
 
 
