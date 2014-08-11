@@ -48,3 +48,13 @@ angular.module('frontendApp', [
                 templateUrl: 'views/barchart.html'
                 controller: 'MonthChartCtrl'
 
+            .state 'workout.loadweek',
+                    url: '/loadmonth/:year/:month/:week'
+                    templateUrl: 'views/loading.html'
+                    controller: 'LoadweekCtrl'
+
+            .state 'workout.week',
+                url: '/month/:year/:month/:week'
+                templateUrl: 'views/barchart.html'
+                controller: 'WeekChartCtrl'
+

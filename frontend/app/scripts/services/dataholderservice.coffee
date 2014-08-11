@@ -5,16 +5,18 @@ angular.module('frontendApp')
 
     currentData = undefined
     header = {
-        year: undefined
-        month: undefined
+        year: undefined,
+        month: undefined,
+        week: undefined
     }
 
     {
         getHeaderData: () -> header
 
-        setHeaderData: (year, month)->
+        setHeaderData: (year, month, week)->
             header.year = year
             header.month = month
+            header.week = week
 
         getCurrentData: ()-> currentData
 

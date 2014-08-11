@@ -6,11 +6,14 @@ angular.module('frontendApp')
     $scope.header = DataHolderService.getHeaderData()
 
     $scope.showAll = () ->
-        DataHolderService.setHeaderData(undefined, undefined)
+        DataHolderService.setHeaderData(undefined, undefined, undefined)
         $state.go('workout.loadall')
 
-    $scope.showYear = (year) ->
-        $state.go("workout.loadyear", {year: year})
+    $scope.showYear = () ->
+        $state.go("workout.loadyear", {year: $scope.header.year})
+
+    $scope.showMonth = ()->
+        $state.go("workout.loadmonth", {year: $scope.header.year, month: $scope.header.month})
 
     $scope.tooltip = ()->
         (key, x, y) ->

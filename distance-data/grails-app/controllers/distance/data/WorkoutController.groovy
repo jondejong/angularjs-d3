@@ -136,7 +136,7 @@ class WorkoutController {
                 }
             }
 
-            responseJSON.month = [
+            responseJSON.week = [
                     year : command.year,
                     month: month,
                     week: command.week,

@@ -10,7 +10,7 @@ angular.module('frontendApp')
         ()->
             d3.selectAll(".nv-bar").on('click',
             (d) ->
-                console.log("clicked got passed in:", d)
+                $state.go('workout.loadweek', {year: $scope.year, month: $scope.month, week: d[0]})
             )
 
     if !$scope.data
