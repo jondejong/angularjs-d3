@@ -5,13 +5,13 @@ angular.module('frontendApp')
     $scope.state= {}
 
     $scope.showAll = () ->
-        $state.go('workout.loadall')
+        $state.go('bar.loadall')
 
     $scope.showYear = () ->
-        $state.go("workout.loadyear", {year: $scope.state.year})
+        $state.go("bar.loadyear", {year: $scope.state.year})
 
     $scope.showMonth = ()->
-        $state.go("workout.loadmonth", {year: $scope.state.year, month: $scope.state.month})
+        $state.go("bar.loadmonth", {year: $scope.state.year, month: $scope.state.month})
 
     $scope.tooltip = ()->
         (key, x, y) ->

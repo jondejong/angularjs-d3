@@ -5,6 +5,6 @@ angular.module('frontendApp')
 
     BarChartService.getYearTotals().then (data)->
         DataHolderService.setCurrentData(data)
-        $state.go("workout.all")
+        $state.go("bar.all")
 
 

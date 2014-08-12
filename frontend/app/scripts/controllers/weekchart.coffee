@@ -5,4 +5,4 @@ angular.module('frontendApp')
     $scope.data = DataHolderService.getCurrentData()
 
     if !$scope.data
-        $state.go('workout.loadweek', {year: $stateParams.year, month: $stateParams.month, week: $stateParams.week})
+        $state.go('bar.loadweek', {year: $stateParams.year, month: $stateParams.month, week: $stateParams.week})

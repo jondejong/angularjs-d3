@@ -5,4 +5,4 @@ angular.module('frontendApp')
 
     BarChartService.getMonthTotals($stateParams.year).then (data)->
         DataHolderService.setCurrentData(data)
-        $state.go("workout.year", {year: $stateParams.year})
+        $state.go("bar.year", {year: $stateParams.year})

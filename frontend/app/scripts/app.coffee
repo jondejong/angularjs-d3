@@ -10,50 +10,50 @@ angular.module('frontendApp', [
         'nvd3ChartDirectives'
     ]).config ($stateProvider, $urlRouterProvider) ->
 
-        $urlRouterProvider.otherwise("/workout/loadall")
+        $urlRouterProvider.otherwise("/bar/loadall")
 
         $stateProvider
-            .state 'workout',
-                url: '/workout'
+            .state 'bar',
+                url: '/bar'
                 templateUrl: 'views/main.html'
                 controller: 'MainCtrl'
 
-            .state 'workout.loadall',
+            .state 'bar.loadall',
                 url: '/loadall'
                 templateUrl: 'views/loading.html'
                 controller: 'LoadAllCtrl'
 
-            .state 'workout.all',
+            .state 'bar.all',
                 url: '/all'
                 templateUrl: 'views/barchart.html'
                 controller: 'AllChartCtrl'
 
-            .state 'workout.loadyear',
+            .state 'bar.loadyear',
                 url: '/loadyear/:year'
                 templateUrl: 'views/loading.html'
                 controller: 'LoadYearCtrl'
 
-            .state 'workout.year',
+            .state 'bar.year',
                 url: '/year/:year'
                 templateUrl: 'views/barchart.html'
                 controller: 'YearChartCtrl'
 
-            .state 'workout.loadmonth',
+            .state 'bar.loadmonth',
                 url: '/loadmonth/:year/:month'
                 templateUrl: 'views/loading.html'
                 controller: 'LoadMonthCtrl'
 
-            .state 'workout.month',
+            .state 'bar.month',
                 url: '/month/:year/:month'
                 templateUrl: 'views/barchart.html'
                 controller: 'MonthChartCtrl'
 
-            .state 'workout.loadweek',
+            .state 'bar.loadweek',
                     url: '/loadmonth/:year/:month/:week'
                     templateUrl: 'views/loading.html'
                     controller: 'LoadweekCtrl'
 
-            .state 'workout.week',
+            .state 'bar.week',
                 url: '/month/:year/:month/:week'
                 templateUrl: 'views/barchart.html'
                 controller: 'WeekChartCtrl'

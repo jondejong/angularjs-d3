@@ -4,7 +4,7 @@ angular.module('frontendApp')
   .controller 'AllChartCtrl', ($scope, DataHolderService, $state) ->
 
     loadYear = (year)->
-        $state.go("workout.loadyear", {year: year})
+        $state.go("bar.loadyear", {year: year})
 
 
     $scope.data = DataHolderService.getCurrentData()
@@ -18,4 +18,4 @@ angular.module('frontendApp')
             )
 
     if !$scope.data
-        $state.go('workout.loadall')
+        $state.go('bar.loadall')
