@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('frontendApp')
-  .service 'WorkoutService', ($http) ->
+  .service 'BarChartService', ($http) ->
 
     {
         getDayTotals: (year, month, week) ->
