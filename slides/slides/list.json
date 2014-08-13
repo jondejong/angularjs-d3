@@ -19,5 +19,39 @@
             }
         }
     ],
-    "start-talking.md"
+    "start-talking.md",
+    [
+        "what-is-d3.md",
+        "d3-examples-1.md",
+        "d3-examples-2.md",
+        "d3-examples-3.md",
+        "d3-examples-4.md",
+        "data-joins.md",
+        "creating-circles.md"
+    ],
+    [
+        "what-is-angularjs.md",
+        "mvc-in-the-brower.md",
+        "components.md",
+        "angular-example.md"
+    ],
+    [
+        "brute-force.md",
+        "bf-1.md",
+        "bf-2.md",
+        "bf-3.md",
+        "bf-4.md"
+    ],
+    [
+        "custom-directive.md",
+        "cd-example.md",
+        "why-to-use-a-custom-directive.md"
+    ],
+    "reusable-directives.md",
+    [
+      "nvd3.md",
+      "nvd3-1.md",
+      "nvd3-2.md",
+      "nvd3-3.md"
+    ]
 ]

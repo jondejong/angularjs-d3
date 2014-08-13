@@ -1,7 +1,10 @@
-##  Start Talking
+##  What are we going to talk about?
+&nbsp;
 
-<pre><code>
-(0..10).each {
-  println "Sample Code ${it}"
-}
-</code></pre>
+* What is D3?
+* What is AngularJS?
+* Options for combining D3 + AngularJS
+  * Brute Force
+  * Roll Your Directive
+  * Reusable directives
+  * NVD3
