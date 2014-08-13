@@ -20,6 +20,7 @@
         }
     ],
     "start-talking.md",
+    "challenges.md",
     [
         "what-is-d3.md",
         "d3-examples-1.md",
@@ -33,10 +34,13 @@
         "what-is-angularjs.md",
         "mvc-in-the-brower.md",
         "components.md",
-        "angular-example.md"
+        "angular-example.md",
+        "services.md",
+        "angular-http.md"
     ],
     [
         "brute-force.md",
+        "why-brute-force.md",
         "bf-1.md",
         "bf-2.md",
         "bf-3.md",
@@ -49,9 +53,15 @@
     ],
     "reusable-directives.md",
     [
-      "nvd3.md",
-      "nvd3-1.md",
-      "nvd3-2.md",
-      "nvd3-3.md"
+        "nvd3.md",
+        "nvd3-1.md",
+        "nvd3-2.md",
+        "nvd3-3.md"
+    ],
+    [
+      "nvd-example-1.md",
+      "nvd-example-2.md",
+      "nvd-example-3.md",
+      "nvd-example-4.md"
     ]
 ]

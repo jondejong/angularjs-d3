@@ -3,6 +3,8 @@
     "presentationTitle": "Combining AngularJS + D3",
     "packageVersion": "0.0.0",
     "useSass": true,
-    "deployToGithubPages": false
+    "deployToGithubPages": false,
+    "githubUsername": "example_username",
+    "githubRepository": "example_repository"
   }
 }
