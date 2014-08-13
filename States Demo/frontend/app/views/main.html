@@ -1,0 +1,25 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-click="loadBar()">Bar</a></li>
+    <li><a ng-click="loadLine()">Line</a></li>
+    <li><a ng-click="loadPie()">Pie</a></li>
+  </ul>
+  <h3 class="text-muted">Workout Tracker</h3>
+</div>
+
+<div>
+    <div class="header" ng-show="state.year">
+        <h3><span class="btn btn-default" ng-show="state.year" ng-click="showAll()">All</span>
+            <span ng-show="state.year && !state.month">{{state.year}}</span>
+            <span ng-show="state.month" class="btn btn-default" ng-click="showYear()">{{state.year}}</span>
+            <span ng-show="state.month && !state.week">{{state.month}}</span>
+            <span ng-show="state.week" class="btn btn-default" ng-click="showMonth()">{{state.month}}</span>
+            <span ng-show="state.week">Week {{state.week}}</span>
+        </h3>
+    </div>
+    <ui-view></ui-view>
+</div>
+
+<div class="footer">
+  <a><span class="glyphicon glyphicon-cloud-download"></span> Available on GitHub</a>
+</div>
