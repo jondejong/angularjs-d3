@@ -29,9 +29,7 @@ function BarChartCtrl($scope, $http) {
         $scope.$watch('modules', function() {
             refreshBarChart($scope.chart, $scope.modules);
         }, true);
-
     });
-
 }
 
 function TransitionalBarChartCtrl($scope, $http) {

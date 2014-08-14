@@ -1,16 +1,11 @@
 refreshBarChart = function (chart, modules) {
 
-    console.log("Modules: ", modules)
-
     var levels = getLevels(modules);
     var scale = d3.scale.linear()
         .domain([0, d3.max(levels)])
         .range([0, 420]);
 
     var rects = chart.selectAll("rect").data(modules)
-        .attr("width", function (d, i) {
-            return scale(d.level);
-        })
 
     rects.enter()
         .append("rect")

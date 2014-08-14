@@ -1,3 +1,6 @@
 ##  Data Joins
+&nbsp;
 
-This is a new Markdown slide
+* Enter
+* Update
+* Exit

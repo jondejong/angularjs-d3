@@ -1,3 +1,13 @@
-##  bf-3
+### Append rects to your chart
 
-This is a new Markdown slide
+    var rects = chart.selectAll("rect").data(modules)
+
+    rects.enter()
+        .append("rect")
+        .attr("y", function (d, i) {
+            return i * 26;
+        })
+        .attr("width", function (d, i) {
+            return scale(d.level);
+        })
+        .attr("height", 20);

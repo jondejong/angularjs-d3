@@ -27,7 +27,13 @@
         "d3-examples-2.md",
         "d3-examples-3.md",
         "d3-examples-4.md",
+        "d3-info-1.md",
+        "d3-info-2.md",
+        "d3-info-3.md",
+        "d3-info-4.md",
+        "d3-info-5.md",
         "data-joins.md",
+        "thinking-in-joins.md",
         "creating-circles.md"
     ],
     [
@@ -44,7 +50,10 @@
         "bf-1.md",
         "bf-2.md",
         "bf-3.md",
-        "bf-4.md"
+        "bf-4.md",
+        "bf-5.md",
+        "bf-6.md",
+        "bf-7.md"
     ],
     [
         "custom-directive.md",
@@ -59,9 +68,9 @@
         "nvd3-3.md"
     ],
     [
-      "nvd-example-1.md",
-      "nvd-example-2.md",
-      "nvd-example-3.md",
-      "nvd-example-4.md"
+        "nvd-example-1.md",
+        "nvd-example-2.md",
+        "nvd-example-3.md",
+        "nvd-example-4.md"
     ]
 ]
