@@ -17,7 +17,6 @@ angular.module('frontendApp')
         $state.go('bar.loadall')
 
     $scope.loadStacked = () ->
-        console.log "boom Loading line graph"
         $state.go('updating.chart')
 
     $scope.showAll = () ->

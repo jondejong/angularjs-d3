@@ -27,14 +27,9 @@ angular.module('frontendApp')
     }
 
     $scope.addNew = () ->
-        console.log("Adding new: ", $scope.new)
-
         i = $scope.data[0].values.length
-#
         $scope.data[0].values.push([i, $scope.new.things])
         $scope.data[1].values.push([i, $scope.new.others])
-#
-#        $scope.apply()
         $scope.clearNew()
 
     $scope.clearNew = () ->

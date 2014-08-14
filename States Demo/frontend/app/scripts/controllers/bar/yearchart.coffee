@@ -8,7 +8,6 @@ angular.module('frontendApp')
         ()->
             d3.selectAll(".nv-bar").on('click',
             (d) ->
-                console.log("clicked got passed in:", d)
                 $state.go('bar.loadmonth', {year: $scope.year, month: d[0]})
             )
 
