@@ -1,9 +1,11 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li ng-class="{'active': bar}"><a ng-click="loadBar()">Bar</a></li>
+    <li ng-class="{'active': stateless}"><a ng-click="loadStateless()">Stateless</a></li>
     <li ng-class="{'active': stacked}"><a ng-click="loadStacked()">Updating</a></li>
   </ul>
-  <h3 ng-show="bar" class="text-muted">Workout Tracker</h3>
+  <h3 ng-show="bar" class="text-muted">Stateful Workout Tracker</h3>
+  <h3 ng-show="stateless" class="text-muted">Stateless Workout Tracker</h3>
   <h3 ng-show="stacked" class="text-muted">Updating Stacked Bar Chart</h3>
 </div>
 
@@ -22,4 +24,5 @@
 
 <div class="footer">
   <a><span class="glyphicon glyphicon-cloud-download"></span> Available on GitHub</a>
+  <span class="pull-right"><a href="http://www.twitter.com/jondejong">@jondejong</a>&nbsp;<a href="http://www.objectpartners.com">www.objectpartners.com</a></span>
 </div>

@@ -3,17 +3,21 @@
 angular.module('frontendApp')
   .controller 'MainCtrl', ($scope, $state) ->
 
-    $scope.line = false
-    $scope.updating = false
-
     checkChartType = ()->
     $scope.bar = $state.current.name.indexOf('bar') != -1
     $scope.stacked = $state.current.name.indexOf('updating') != -1
+    $scope.stateless = $state.current.name.indexOf('stateless') != -1
 
     $scope.state= {}
 
+    $scope.loadBar = () ->
+        $state.go('bar.all')
+
     $scope.loadStacked = () ->
         $state.go('updating.chart')
+
+    $scope.loadStateless = () ->
+        $state.go('stateless.chart')
 
     $scope.showAll = () ->
         $state.go('bar.all')

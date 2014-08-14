@@ -40,6 +40,18 @@ angular.module('frontendApp', [
                 templateUrl: 'views/barchart.html'
                 controller: 'BarWeekChartCtrl'
 
+#        Stateless Bar Chart States
+
+            .state 'stateless',
+                url: '/stateless'
+                templateUrl: 'views/main.html'
+                controller: 'MainCtrl'
+
+            .state 'stateless.chart',
+                url: '/chart'
+                templateUrl: 'views/statelesschart.html'
+                controller: 'StatelessChartCtrl'
+
 #        Updating Stacked Bar Chart States
 
             .state 'updating',
