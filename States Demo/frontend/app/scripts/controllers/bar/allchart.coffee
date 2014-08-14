@@ -1,12 +1,9 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'BarAllChartCtrl', ($scope, $state, BarChartService) ->
+  .controller 'BarAllChartCtrl', ($scope, $state, BarChartService, data) ->
 
-    $scope.data = undefined
-
-    BarChartService.getYearTotals().then (data) ->
-        $scope.data = data
+    $scope.data = data
 
     $scope.callback = ()->
         ()->

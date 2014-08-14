@@ -1,10 +1,8 @@
 angular.module('frontendApp')
-.controller 'BarYearChartCtrl', ($scope, $state, $stateParams, BarChartService) ->
-
-    BarChartService.getMonthTotals($stateParams.year).then (data) ->
-        $scope.data = data
+.controller 'BarYearChartCtrl', ($scope, $state, $stateParams, data) ->
 
     $scope.year = $stateParams.year
+    $scope.data = data
 
     $scope.callback = ()->
         ()->

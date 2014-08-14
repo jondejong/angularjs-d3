@@ -1,5 +1,11 @@
 angular.module('frontendApp')
-.controller 'StatelessChartCtrl', ($scope, BarChartService, $rootScope) ->
+.controller 'StatelessChartCtrl', ($scope, BarChartService, data) ->
+
+    setSelections = (d) ->
+        $scope.selections = (s[0] for s in d[0].values)
+
+    $scope.data = data
+    setSelections(data)
 
     $scope.state = {
         year: undefined,
@@ -11,19 +17,19 @@ angular.module('frontendApp')
         $scope.state = {}
         BarChartService.getYearTotals().then (data) ->
             $scope.data = data
-            $scope.selections = (d[0] for d in data[0].values)
+            setSelections(data)
 
     $scope.showYearStateless = () ->
         $scope.state.month = undefined
         $scope.state.week = undefined
         BarChartService.getMonthTotals($scope.state.year).then (data) ->
-            $scope.selections = (d[0] for d in data[0].values)
+            setSelections(data)
             $scope.data = data
 
     $scope.showMonthStateless = () ->
         $scope.state.week = undefined
         BarChartService.getWeekTotals($scope.state.year, $scope.state.month).then (data) ->
-            $scope.selections = (d[0] for d in data[0].values)
+            setSelections(data)
             $scope.data = data
 
     $scope.showWeekStateless = () ->
@@ -41,5 +47,3 @@ angular.module('frontendApp')
         else
             $scope.state.week = selector
             $scope.showWeekStateless()
-
-    $scope.showAllStateless()
