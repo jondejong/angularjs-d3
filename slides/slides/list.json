@@ -7,17 +7,18 @@
     },
     [
         {
-            "filename": "who-am-i.md",
+            "filename": "object-partners.md",
             "attr": {
                 "data-state": "title"
             }
         },
         {
-            "filename": "object-partners.md",
+            "filename": "who-am-i.md",
             "attr": {
                 "data-state": "title"
             }
         }
+
     ],
     "start-talking.md",
     "challenges.md",
