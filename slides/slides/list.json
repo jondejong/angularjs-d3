@@ -52,13 +52,18 @@
         "bf-3.md",
         "bf-4.md",
         "bf-5.md",
-        "bf-6.md",
-        "bf-7.md"
+        "bf-6.md"
     ],
     [
         "custom-directive.md",
+        "why-to-use-a-custom-directive.md",
         "cd-example.md",
-        "why-to-use-a-custom-directive.md"
+        "cd-1.md",
+        "cd-2.md",
+        "cd-3.md",
+        "cd-4.md",
+        "cd-5.md",
+        "cd-6.md"
     ],
     "reusable-directives.md",
     [

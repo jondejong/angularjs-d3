@@ -1,3 +1,3 @@
 ##  Custom Directive
 
-This is a new Markdown slide
+Hide all the D3 Stuff yourself
