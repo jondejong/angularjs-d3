@@ -1,8 +1,8 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'BarWeekChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
-    $scope.data = DataHolderService.getCurrentData()
+  .controller 'BarWeekChartCtrl', ($scope, BarChartService, $stateParams) ->
 
-    if !$scope.data
-        $state.go('bar.loadweek', {year: $stateParams.year, month: $stateParams.month, week: $stateParams.week})
+    BarChartService.getDayTotals($stateParams.year, $stateParams.month, $stateParams.week).then (data) ->
+        $scope.data = data
+

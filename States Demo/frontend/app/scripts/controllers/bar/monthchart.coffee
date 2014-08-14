@@ -1,8 +1,10 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'BarMonthChartCtrl', ($scope, DataHolderService, $stateParams, $state) ->
-    $scope.data = DataHolderService.getCurrentData()
+  .controller 'BarMonthChartCtrl', ($scope, $stateParams, $state, BarChartService) ->
+    BarChartService.getWeekTotals($stateParams.year, $stateParams.month).then (data) ->
+        $scope.data = data
+
     $scope.year = $stateParams.year
     $scope.month = $stateParams.month
 
@@ -10,8 +12,5 @@ angular.module('frontendApp')
         ()->
             d3.selectAll(".nv-bar").on('click',
             (d) ->
-                $state.go('bar.loadweek', {year: $scope.year, month: $scope.month, week: d[0]})
+                $state.go('bar.week', {year: $scope.year, month: $scope.month, week: d[0]})
             )
-
-    if !$scope.data
-        $state.go('bar.loadmonth', {year: $scope.year, month: $scope.month})

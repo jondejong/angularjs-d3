@@ -12,21 +12,17 @@ angular.module('frontendApp')
 
     $scope.state= {}
 
-
-    $scope.loadBar = () ->
-        $state.go('bar.loadall')
-
     $scope.loadStacked = () ->
         $state.go('updating.chart')
 
     $scope.showAll = () ->
-        $state.go('bar.loadall')
+        $state.go('bar.all')
 
     $scope.showYear = () ->
-        $state.go("bar.loadyear", {year: $scope.state.year})
+        $state.go("bar.year", {year: $scope.state.year})
 
     $scope.showMonth = ()->
-        $state.go("bar.loadmonth", {year: $scope.state.year, month: $scope.state.month})
+        $state.go("bar.month", {year: $scope.state.year, month: $scope.state.month})
 
     $scope.tooltip = ()->
         (key, x, y) ->

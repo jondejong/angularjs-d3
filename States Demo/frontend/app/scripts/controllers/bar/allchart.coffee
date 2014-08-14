@@ -1,19 +1,19 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'BarAllChartCtrl', ($scope, DataHolderService, $state) ->
+  .controller 'BarAllChartCtrl', ($scope, $state, BarChartService) ->
 
-    loadYear = (year)->
-        $state.go("bar.loadyear", {year: year})
+    $scope.data = undefined
 
-    $scope.data = DataHolderService.getCurrentData()
+    BarChartService.getYearTotals().then (data) ->
+        $scope.data = data
 
     $scope.callback = ()->
         ()->
             d3.selectAll(".nv-bar").on('click',
                 (d) ->
-                    loadYear(d[0])
+                    $state.go("bar.year", {year: d[0]})
             )
 
-    if !$scope.data
-        $state.go('bar.loadall')
+
+

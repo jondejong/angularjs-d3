@@ -1,5 +1,5 @@
 angular.module('frontendApp')
-.controller 'UpdatingBarChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
+.controller 'UpdatingBarChartCtrl', ($scope) ->
     $scope.data = [
         {
             key: "Things",
