@@ -1,5 +1,5 @@
 angular.module('frontendApp')
-.controller 'YearChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
+.controller 'BarYearChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
 
     $scope.data = DataHolderService.getCurrentData()
     $scope.year = $stateParams.year

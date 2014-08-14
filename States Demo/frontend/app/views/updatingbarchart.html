@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-4 new-box">
+        <div class="row header">
+            <div class="col-xs-12"><strong>Add New:&nbsp;</strong></div>
+        </div>
+        <div class="row input-row">
+            <div class="col-xs-4"><strong>Things: </strong></div>
+            <div class="col-xs-8"><input max="10" min="0" ng-model="new.things" type="number"></div>
+        </div>
+        <div class="row input-row">
+            <div class="col-xs-4"><strong>Others: </strong></div>
+            <div class="col-xs-8"><input max="10" min="0" ng-model="new.others" type="number"></div>
+        </div>
+        <div class="row input-row">
+            <div class="col-xs-12">
+                <span class="btn btn-primary" ng-click="addNew()">Save</span>
+                &nbsp;<span class="btn btn-default" ng-click="clearNew()">Clear</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <nvd3-multi-bar-chart
+                data="data"
+                id="exampleId"
+                width="500"
+                height="550"
+                showYAxis="true"
+                showLegend="true"
+                showXAxis="true"
+                delay="1200"
+                tooltips="true"
+                tooltipcontent="tooltip()"
+                callback="callback()"
+                margin="{left: 50, top: 50, bottom: 100, right: 50}"
+                objectEquality="true"
+                stacked="true">
+            <svg></svg>
+        </nvd3-multi-bar-chart>
+    </div>
+</div>
+
+
+<!--<div class="row">-->
+<!--<div class="col-xs-12">-->
+
+<!--</div>-->
+<!--</div>-->

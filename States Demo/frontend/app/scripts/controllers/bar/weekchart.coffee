@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'WeekChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
+  .controller 'BarWeekChartCtrl', ($scope, DataHolderService, $state, $stateParams) ->
     $scope.data = DataHolderService.getCurrentData()
 
     if !$scope.data

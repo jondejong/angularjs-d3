@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'LoadMonthCtrl', ($scope, BarChartService, DataHolderService, $state, $stateParams) ->
+  .controller 'BarLoadMonthCtrl', ($scope, BarChartService, DataHolderService, $state, $stateParams) ->
 
     BarChartService.getWeekTotals($stateParams.year, $stateParams.month).then (data)->
         DataHolderService.setCurrentData(data)

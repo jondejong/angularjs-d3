@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'MonthChartCtrl', ($scope, DataHolderService, $stateParams, $state) ->
+  .controller 'BarMonthChartCtrl', ($scope, DataHolderService, $stateParams, $state) ->
     $scope.data = DataHolderService.getCurrentData()
     $scope.year = $stateParams.year
     $scope.month = $stateParams.month

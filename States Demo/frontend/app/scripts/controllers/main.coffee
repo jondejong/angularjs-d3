@@ -3,34 +3,22 @@
 angular.module('frontendApp')
   .controller 'MainCtrl', ($scope, $state) ->
 
-    $scope.bar = false
     $scope.line = false
-    $scope.pie = false
+    $scope.updating = false
 
-    checkChartType = (state)->
-        if $state.current.name.indexOf('bar') != -1
-            $scope.bar = true
-            $scope.line = false
-            $scope.pie = false
-        else if $state.current.name.indexOf('line') != -1
-            $scope.line = true
-            $scope.bar = false
-            $scope.pie = false
-        else if $state.current.name.indexOf('pie') != -1
-            $scope.pie = true
-            $scope.line = false
-            $scope.bar = false
+    checkChartType = ()->
+    $scope.bar = $state.current.name.indexOf('bar') != -1
+    $scope.stacked = $state.current.name.indexOf('updating') != -1
 
     $scope.state= {}
 
+
     $scope.loadBar = () ->
-        console.log "Loading bar chart"
+        $state.go('bar.loadall')
 
-    $scope.loadLine = () ->
-        console.log "Loading line graph"
-
-    $scope.loadPie = () ->
-        console.log "Loading Pie Chart"
+    $scope.loadStacked = () ->
+        console.log "boom Loading line graph"
+        $state.go('updating.chart')
 
     $scope.showAll = () ->
         $state.go('bar.loadall')
@@ -49,4 +37,4 @@ angular.module('frontendApp')
 
     $scope.$on '$stateChangeSuccess', (event, state, params) ->
         $scope.state = params
-        checkChartType(state)
+        checkChartType()

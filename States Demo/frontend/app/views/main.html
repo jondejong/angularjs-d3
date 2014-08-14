@@ -1,10 +1,10 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-click="loadBar()">Bar</a></li>
-    <li><a ng-click="loadLine()">Line</a></li>
-    <li><a ng-click="loadPie()">Pie</a></li>
+    <li ng-class="{'active': bar}"><a ng-click="loadBar()">Bar</a></li>
+    <li ng-class="{'active': stacked}"><a ng-click="loadStacked()">Updating</a></li>
   </ul>
-  <h3 class="text-muted">Workout Tracker</h3>
+  <h3 ng-show="bar" class="text-muted">Workout Tracker</h3>
+  <h3 ng-show="stacked" class="text-muted">Updating Stacked Bar Chart</h3>
 </div>
 
 <div>

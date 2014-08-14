@@ -1,14 +1,12 @@
 'use strict'
 
 angular.module('frontendApp')
-  .controller 'AllChartCtrl', ($scope, DataHolderService, $state) ->
+  .controller 'BarAllChartCtrl', ($scope, DataHolderService, $state) ->
 
     loadYear = (year)->
         $state.go("bar.loadyear", {year: year})
 
-
     $scope.data = DataHolderService.getCurrentData()
-
 
     $scope.callback = ()->
         ()->

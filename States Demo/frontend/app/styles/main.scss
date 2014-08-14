@@ -6,6 +6,21 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+
+.nav-pills li {
+  cursor: pointer;
+}
+
+.new-box {
+//  padding: 5px 0px 5px 0px;
+//  margin: 5px;
+  border: 2px solid #e5e5e5;
+}
+
+.input-row {
+  margin: 2px;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
