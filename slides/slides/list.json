@@ -23,10 +23,6 @@
     "challenges.md",
     [
         "what-is-d3.md",
-        "d3-examples-1.md",
-        "d3-examples-2.md",
-        "d3-examples-3.md",
-        "d3-examples-4.md",
         "d3-info-1.md",
         "d3-info-2.md",
         "d3-info-3.md",
@@ -69,14 +65,8 @@
     "reusable-directives.md",
     [
         "nvd3.md",
-        "nvd3-1.md",
-        "nvd3-2.md",
-        "nvd3-3.md"
+        "nvd3-1.md"
     ],
-    [
-        "nvd-example-1.md",
-        "nvd-example-2.md",
-        "nvd-example-3.md",
-        "nvd-example-4.md"
-    ]
-]
+
+    "nvd-example-1.md"
+  ]

@@ -1,3 +1,6 @@
-##  MVC In The Brower
+###  What is AngularJS?
+&nbsp;
 
-This is a new Markdown slide
+* MVC In The Brower
+* Declarative data binding
+* Dogmatic

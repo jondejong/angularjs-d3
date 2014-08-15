@@ -1,3 +1,6 @@
 ##  NVD3
 
-This is a new Markdown slide
+http://nvd3.org/
+&nbsp;
+
+Maintained By Novus Partners

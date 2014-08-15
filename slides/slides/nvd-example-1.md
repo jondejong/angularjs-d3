@@ -1,10 +1,6 @@
 ##  Using NVD3 Directives
-
-This is a new Markdown slide
 &nbsp;
-* Why?
-* Use of state provides
-* Loading state
-* Transition state between charts
 
-GitHub Link
+* [https://github.com/cmaurer/angularjs-nvd3-directives](https://github.com/cmaurer/angularjs-nvd3-directives)
+* Written By Christian Maurer
+* Wraps NVD3 Calls in AngularJS directives
