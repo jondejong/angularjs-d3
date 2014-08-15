@@ -1,3 +1,10 @@
-##  d3-info-5
+### SVG Shape generators
+&nbsp;
 
-This is a new Markdown slide
+Based on inputs, calculates the Path descriptors (The ‘d’ element)
+
+* Line
+* Arc
+* Area
+* Chord
+* Diagonal (Cubic Bézier)

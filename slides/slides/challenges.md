@@ -1,3 +1,6 @@
 ##  challenges
+&nbsp;
 
-This is a new Markdown slide
+* Two different types of data bindings
+* D3 programatic
+* Angular declarative

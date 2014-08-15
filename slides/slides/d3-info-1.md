@@ -1,3 +1,10 @@
-##  d3-info-1
+### What is D3?
+&nbsp;
 
-This is a new Markdown slide
+* DOM Manipulation
+  * Selections
+  * Joins
+* Utilities
+  * Generators
+  * Layouts
+* SVG

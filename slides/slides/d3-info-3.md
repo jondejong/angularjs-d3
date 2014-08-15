@@ -1,3 +1,7 @@
-##  d3-info-3
+###  DOM Manipulation
+&nbsp;
 
-This is a new Markdown slide
+    d3.select(".content").style("width", "500");
+    d3.select(".content").style("width", function(d) {
+        return 2 * d;
+    });
