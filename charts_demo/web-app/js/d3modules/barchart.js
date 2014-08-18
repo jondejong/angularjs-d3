@@ -5,7 +5,9 @@ refreshBarChart = function (chart, modules) {
         .domain([0, d3.max(levels)])
         .range([0, 420]);
 
-    var rects = chart.selectAll("rect").data(modules)
+    var rects = chart.selectAll("rect").data(modules).attr("width", function (d, i) {
+        return scale(d.level);
+    });
 
     rects.enter()
         .append("rect")
@@ -16,7 +18,6 @@ refreshBarChart = function (chart, modules) {
             return scale(d.level);
         })
         .attr("height", 20);
-
 
     var texts = chart.selectAll("text").data(modules).text(function (d, i) {
         return d.name + ": " + d.level;

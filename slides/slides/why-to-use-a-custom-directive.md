@@ -3,3 +3,5 @@
 
 * Idiomatic AngularJS
 * Reusable
+* Isolation
+* Testing

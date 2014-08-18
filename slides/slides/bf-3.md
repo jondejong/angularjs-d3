@@ -1,6 +1,9 @@
 ### Append rects to your chart
 
     var rects = chart.selectAll("rect").data(modules)
+    .attr("width", function (d, i) {
+        return scale(d.level);
+    });
 
     rects.enter()
         .append("rect")

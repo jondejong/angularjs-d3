@@ -20,6 +20,7 @@
         }
     ],
     "start-talking.md",
+    "github-structure.md",
     [
         "what-is-d3.md",
         "d3-info-1.md",
@@ -67,6 +68,5 @@
         "nvd3.md",
         "nvd3-1.md"
     ],
-
     "nvd-example-1.md"
-  ]
+]
